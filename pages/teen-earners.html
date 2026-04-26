@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funngro for Teens | Turn Skills into First Salary</title>
+  <meta name="description" content="Join 1M+ teens on Funngro to earn money as a student, build real-world skills, and start your first salary journey." />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="theme-teen">
+  <header class="topbar">
+    <div class="brand">funngro</div>
+    <nav>
+      <a href="teen-earners.html" aria-current="page">Teens</a>
+      <a href="business-brands.html">Business & Brands</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-teen">
+      <p class="eyebrow">Teen Freelancing India</p>
+      <h1>Turn Your Skills into Your First Salary.</h1>
+      <p class="subhead">Join 1M+ teens earning money and gaining real-world experience with top brands. No experience? We’ll help you build it.</p>
+      <div class="cta-row">
+        <button>Start Earning Now</button>
+        <button class="secondary">Explore Teen Projects</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Pick your category, start today</h2>
+      <div class="bento-grid">
+        <article>Graphic Design</article>
+        <article>Social Media</article>
+        <article>Coding</article>
+        <article>Video Editing</article>
+        <article>Content Writing</article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Potential Earnings Slider (Demo)</h2>
+      <label for="skill">Skill</label>
+      <select id="skill">
+        <option>Logo Design</option>
+        <option>Instagram Reels Editing</option>
+        <option>Landing Page Coding</option>
+      </select>
+      <label for="hours">Hours per week: <span id="hoursValue">5</span></label>
+      <input type="range" id="hours" min="1" max="20" value="5" />
+      <p class="earning-output">Estimated payout: <strong id="payout">₹2,000</strong></p>
+    </section>
+
+    <section>
+      <h2>Wall of Fame</h2>
+      <div class="proof-grid">
+        <article class="proof-card">Rahul (16) — ₹20,000 earned — Bought first iPad</article>
+        <article class="proof-card">Aisha (17) — ₹12,500 earned — Paid for design course</article>
+        <article class="proof-card">Kabir (15) — ₹9,000 earned — Got first laptop upgrade</article>
+      </div>
+    </section>
+
+    <section class="bottom-cta">
+      <h2>Ready for your first paid project?</h2>
+      <button>Create Free Teen Account</button>
+      <p class="trust">Secure payouts · Verified projects · Mentor support</p>
+    </section>
+  </main>
+
+  <script>
+    const hours = document.getElementById('hours');
+    const hoursValue = document.getElementById('hoursValue');
+    const payout = document.getElementById('payout');
+    const skill = document.getElementById('skill');
+
+    function updateEarnings() {
+      const hr = Number(hours.value);
+      hoursValue.textContent = hr;
+      const base = skill.value === 'Logo Design' ? 400 : skill.value === 'Instagram Reels Editing' ? 500 : 700;
+      payout.textContent = `₹${(base * hr).toLocaleString('en-IN')}`;
+    }
+
+    [hours, skill].forEach((node) => node.addEventListener('input', updateEarnings));
+    updateEarnings();
+  </script>
+</body>
+</html>
