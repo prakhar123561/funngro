@@ -97,3 +97,36 @@ th { background: #eef4ff; }
   background: #fff;
   border: 1px solid #e2ebff;
 }
+
+.seo-keywords {
+  margin-top: .75rem;
+  opacity: .9;
+  font-size: .95rem;
+}
+
+.wall-of-fame .fame-card {
+  text-align: center;
+}
+
+.fame-card img {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(89, 247, 51, .55);
+}
+
+.fame-card h3 {
+  margin: .55rem 0 .2rem;
+}
+
+.fame-stat {
+  font-weight: 700;
+  margin: 0 0 .35rem;
+}
+
+.dream-buy {
+  margin: 0;
+  font-size: .95rem;
+  opacity: .9;
+}
